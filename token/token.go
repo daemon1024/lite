@@ -39,3 +39,20 @@ type Token struct {
 	Type    TokenType
 	Literal string
 }
+
+var keywords = map[string]TokenType{
+	"let":   LET,
+	"true":  TRUE,
+	"false": FALSE,
+	"if":    IF,
+	"then":  THEN,
+	"else":  ELSE,
+}
+
+//LookupIdent looks up if the given identifier is a keyword or not
+func LookupIdent(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+	return IDENT
+}
