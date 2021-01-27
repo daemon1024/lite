@@ -22,6 +22,15 @@ const (
 	EQ     = "=="
 	NOT_EQ = "!="
 
+	// Delimiters
+	COMMA     = ","
+	SEMICOLON = ";"
+
+	LPAREN = "("
+	RPAREN = ")"
+	LBRACE = "{"
+	RBRACE = "}"
+
 	// Keywords
 	LET   = "LET"
 	TRUE  = "TRUE"
